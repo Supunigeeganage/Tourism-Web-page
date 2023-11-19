@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To Do List</title>
+   
+     <style>
+        body {
+          margin: 0;
+        }
+        
+        /* Style the header */
+        .header {
+          background-color: #f1f1f1;
+          padding: 20px;
+          text-align: center;
+        }
+        
+        /* Style the top navigation bar */
+        .topnav {
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        /* Style the topnav links */
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        /* Change color on hover */
+        .topnav a:hover {
+          background-color: rgb(41, 36, 36);
+          color: black;
+        }
+        </style>
+        </head>
+        <body>
+        
+       
+        
+        <div class="topnav">
+          <a href="mini01.html" target="_blank">HOME</a>
+          <a href="mini02.html" target="_blank">Gallery</a>
+          <a href="mini04.html" target="_blank">About Us</a>
+          <a href="mini03.html" target="_blank">visiting sites</a>
+        </div>
+        </body>
+            </style>
+        
+    <style>
+        body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.about-section {
+  padding: 150px;
+  text-align: center;
+  background-color: #d7a6db;
+  color: white;
+}
+        .footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+    </style>
+    <div class="about-section">
+        <h1>TO DO LIST</h1>
+        <p>Add your favourote visiting sites to your personal list</p>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+        <ul>
+    <li v-for="item in items">{{ item }}</li>
+        </ul>
+        <input id="input" type="text" v-model="newItem">
+        <button v-on:click="addItem">Add to do list</button>
+    </div>
+    <script>
+        var app = new Vue(
+            {
+                el:'#app',
+                data:{
+                    items :[]
+                },
+               methods:{
+                   addItem (){
+                       this.items.push(this.newItem);
+                       this.newItem =''
+                   }
+               } 
+
+            }
+        );
+
+    </script>
+        
+      </div>
+    <div class="footer">
+        <p>© 2021.Peral of indian ocean </p>
+        <a href="https://www.instagram.com/" target="_blank">instagram</a>
+        <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+        <a href="https://twitter.com/?lang=en" target="_blank">twitter</a>
+        <a href="mini06.html" target="_blank">site map</a>
+      </div>
+</body>
+
+</html>
